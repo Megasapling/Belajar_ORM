@@ -1,59 +1,53 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ◢ SISTEM MANAJEMEN KARYAWAN - RED GEOMETRY
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="300" alt="Laravel Logo">
 </p>
 
-## About Laravel
+## ◼ Deskripsi Proyek
+Proyek ini adalah aplikasi manajemen data karyawan yang dibangun menggunakan **Laravel Eloquent**. Aplikasi ini mengimplementasikan relasi antar tabel (Join), fitur pencarian dinamis, dan kustomisasi antarmuka dengan tema visual **Geometris Merah-Hitam**.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Tujuan proyek ini adalah untuk memenuhi tugas mata pelajaran Pemrograman Web (PW) mengenai materi **Eloquent ORM & Blade Templating**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ◼ Fitur Utama
+1. **Model Relasi (Eloquent Join):** Menghubungkan Model `Karyawan` dengan Model `Departemen` menggunakan relasi `belongsTo`.
+2. **Fitur Pencarian (Search):** Mencari data karyawan berdasarkan Nama atau Posisi secara real-time.
+3. **Custom UI/UX:** Tampilan menggunakan Tailwind CSS dengan efek *clip-path* geometris, *animated lines*, dan skema warna gelap (Dark Mode).
+4. **CRUD System:** Manajemen data operasional karyawan (Tambah, Baca, Ubah, Hapus).
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## ◼ Hasil Pengerjaan (Preview)
+Berikut adalah tampilan antarmuka aplikasi yang telah dikustomisasi:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+> **Catatan:** Pastikan Anda telah memasukkan gambar screenshot di folder `public/img/screenshot.png` atau ganti link di bawah dengan link gambar Anda.
 
-## Laravel Sponsors
+![Dashboard Karyawan](https://via.placeholder.com/800x450/1a0000/ef4444?text=Screenshot+Web+Geometri+Merah+Hitam)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## ◼ Teknologi yang Digunakan
+- **Framework:** Laravel 11/12
+- **Database:** SQLite / MySQL
+- **Styling:** Tailwind CSS (Custom Geometry Patterns)
+- **Language:** PHP 8.x
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## ◼ Analisis Teknis (Perspektif Ahli)
+Berdasarkan struktur kode yang dibangun, berikut adalah analisis singkatnya:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* **Eager Loading:** Menggunakan `Karyawan::with('departemen')` untuk mencegah masalah *N+1 Query*, yang secara drastis meningkatkan kecepatan pemuatan data saat aplikasi menangani ribuan baris data.
+* **Encapsulation:** Logika bisnis dipisahkan antara Model (Data), View (Presentasi), dan Controller (Logika), mengikuti standar industri **MVC (Model-View-Controller)**.
+* **Pro & Kontra Desain Geometris:**
+    * *Pro:* Memberikan identitas visual yang kuat dan profesional (Brutalism Style).
+    * *Kontra:* Penggunaan *clip-path* yang berlebihan pada perangkat lama (legacy) terkadang memberikan beban render GPU yang sedikit lebih tinggi dibanding border standar.
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## ◼ Cara Instalasi
+1. Clone repository:
+   ```bash
+   git clone <link-repo-anda>
